@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void power(double m, int n=2)
+float power(float  m, int n=2) // here n is the base default value 2
 {
         long double power = 1;
     int i;
@@ -9,21 +9,31 @@ void power(double m, int n=2)
     {
         power = power * m;
     }
-cout <<"\n"<<m <<"\t" << n <<"\t" << power;
+    return power;
+  
+   }
+   float power( int n=4,float m=2.0)
+{
+        long double power = 1;
+    int i;
+         for(i=1; i<=n; i++)
+    {
+        power = power * m;
+    }
+    return power;
+
    
+   } 
+   void display()
+   {
+	cout << " power = "<<power(3.0,3);  //  output 27 output
+	cout <<" POWER is ="<<power(3); // output...8
+	cout <<"\n\t POWER = "<<power();   //output ...16
+ 
    }
 int main()
-{ int n;
-double m;
-    /* Input base and exponent from user */
-    cout <<"Enter m: ";
-    cin >> m;
-    
-cout <<"Enter n: ";
-    cin>>n;
-power(m,n); 
-power(m);   
-
+{ 
+	display();
     return 0;
 }
 
